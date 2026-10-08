@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <!-- Background Brand Blue -->
+  <rect width="600" height="450" fill="#1098C7" rx="8" />
+  
+  <!-- Outer border line matching real billboard sign -->
+  <rect x="3" y="3" width="594" height="444" fill="none" stroke="#0879A3" stroke-width="2" rx="6" />
+
+  <!-- The Emblem: Stylized Billboard 'B' -->
+  <g transform="translate(235, 38)">
+    <!-- Dark shadow / arched base beneath the B -->
+    <path d="M -2 128 C 30 115, 80 120, 126 142 C 100 156, 45 160, 15 158 Z" fill="#302B2B" />
+    
+    <!-- Dark 3D extrude for the B -->
+    <path d="M 68 0 L 78 12 C 95 14, 115 32, 112 56 C 110 70, 98 82, 85 88 C 110 96, 118 118, 108 138 L 92 138 C 102 122, 94 104, 76 100 L 76 134 L -2 134 L -2 0 Z" fill="#302B2B" />
+
+    <!-- Main White Letter 'B' Body -->
+    <path d="M 0 0 L 64 0 C 86 0, 98 16, 96 36 C 94 48, 86 58, 72 62 C 90 66, 100 80, 98 102 C 96 122, 80 130, 58 130 L 0 130 Z" fill="#FFFFFF" />
+
+    <!-- Top Counter: Cutout with Billboard 'T' shape in Brand Blue -->
+    <rect x="24" y="24" width="40" height="34" fill="#1098C7" rx="2" />
+    <path d="M 32 24 L 56 24 L 56 34 L 48 34 L 48 58 L 40 58 L 40 34 L 32 34 Z" fill="#FFFFFF" />
+
+    <!-- Bottom Counter of B -->
+    <path d="M 24 74 L 56 74 C 64 74, 70 78, 70 86 C 70 94, 64 98, 56 98 L 24 98 Z" fill="#1098C7" />
+  </g>
+
+  <!-- Wordmark: "Bhagyalaxmi" -->
+  <text x="300" y="260" 
+        text-anchor="middle" 
+        fill="#FFFFFF" 
+        font-family="'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif" 
+        font-weight="800" 
+        font-size="62" 
+        letter-spacing="-0.5"
+        style="filter: drop-shadow(0px 3px 5px rgba(48, 43, 43, 0.45));">
+    Bhagyalaxmi
+  </text>
+
+  <!-- Sub-wordmark: "BILLBOARDS" in spaced white uppercase -->
+  <text x="300" y="338" 
+        text-anchor="middle" 
+        fill="#FFFFFF" 
+        font-family="'Manrope', system-ui, sans-serif" 
+        font-weight="900" 
+        font-size="36" 
+        letter-spacing="10"
+        style="filter: drop-shadow(0px 2px 3px rgba(48, 43, 43, 0.35));">
+    BILLBOARDS
+  </text>
+
+  <!-- Bottom city designation: "Kalaburagi" in #302B2B dark charcoal -->
+  <text x="300" y="415" 
+        text-anchor="middle" 
+        fill="#302B2B" 
+        font-family="'Manrope', system-ui, sans-serif" 
+        font-weight="800" 
+        font-size="44" 
+        letter-spacing="1">
+    Kalaburagi
+  </text>
+</svg>

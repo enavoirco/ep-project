@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #1098C7;
+  --color-brand-blue-dark: #0879A3;
+  --color-brand-blue-light: #E8F6FA;
+  --color-brand-dark: #302B2B;
+  --color-brand-dark-soft: #454141;
+  --color-brand-white: #FFFFFF;
+  --color-brand-cream: #F7F7F4;
+  --color-brand-gray: #747474;
+  --color-brand-border: #E3E3E0;
+}
+
+:root {
+  --brand-blue: #1098C7;
+  --brand-blue-dark: #0879A3;
+  --brand-blue-light: #E8F6FA;
+  --brand-dark: #302B2B;
+  --brand-dark-soft: #454141;
+  --brand-white: #FFFFFF;
+  --brand-cream: #F7F7F4;
+  --brand-gray: #747474;
+  --brand-border: #E3E3E0;
+}
+
+@layer base {
+  body {
+    background-color: #FFFFFF;
+    color: #302B2B;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Scrollbar for dashboard tables and kanban */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F7F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #E3E3E0;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1098C7;
+}
