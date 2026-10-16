@@ -38,7 +38,7 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, 'localhost', () => {
+  app.listen(PORT, () => {
     console.log(`🚀 Bhagyalaxmi Billboards API listening on http://localhost:${PORT}`);
   });
 }

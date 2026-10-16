@@ -71,3 +71,16 @@ npm start
 ```
 
 The initial admin account is created from `ADMIN_EMAIL` and `ADMIN_PASSWORD` when the local database is first initialized. Use a unique password of at least 12 characters and a unique `JWT_SECRET` of at least 32 characters in `.env`; do not commit `.env` or `data/database.json`. The Vite development server proxies `/api` requests to the backend on port 3000.
+
+## Deploying to Vercel and Render
+
+Vercel serves the Vite frontend but does not start the Express API. Deploy the backend as a separate Render Web Service:
+
+1. Create a Render Web Service from this repository. Set its root directory to the directory containing this app's `package.json` (leave it blank if `package.json` is at the repository root).
+2. Set the build command to `npm install` and the start command to `npm start`.
+3. Add a persistent disk mounted at `/var/data`, then set `DATA_DIR` to `/var/data`.
+4. Set `ADMIN_EMAIL`, `ADMIN_PASSWORD` (at least 12 characters), and `JWT_SECRET` (at least 32 characters) in the Render environment settings. Generate unique production secrets; do not reuse development credentials.
+5. Once Render has deployed, verify `https://<your-render-service>.onrender.com/api/health` returns `{"status":"ok",...}`.
+6. In the Vercel project's environment variables, set `VITE_API_URL` to the Render service origin (for example, `https://your-api.onrender.com`, without `/api`). Redeploy the Vercel frontend so the build includes that value.
+
+Keep the persistent disk attached to the backend service: the local JSON database is stored there and contains admin credentials, enquiries, and CRM data. The initial admin account is created only when the database file is first initialized.
